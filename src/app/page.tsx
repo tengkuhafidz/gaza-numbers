@@ -1,12 +1,13 @@
 import dayjs from "dayjs";
 import { Metadata } from "next";
-import { FaChildren, FaUserDoctor } from "react-icons/fa6";
+import abbreviate from 'number-abbreviate';
+import { FaArrowRight, FaChildren, FaUserDoctor } from "react-icons/fa6";
 import { GiAmbulance } from "react-icons/gi";
 import { IoWoman } from "react-icons/io5";
 import { MdRecordVoiceOver } from "react-icons/md";
-import abbreviate from 'number-abbreviate';
 import Headline from "./Headline";
 import Stat from "./Stat";
+
 
 
 async function getData() {
@@ -22,8 +23,8 @@ export async function generateMetadata(
   const { martyred } = await getData()
   const daysOfWarCrimes = dayjs().diff('2023-10-07', 'day')
 
-  const title = 'Gaza in Numbers 🇵🇸'
-  const description = 'Stay informed on the latest Gaza-Nakba numbers'
+  const title = 'Gaza Geneocide Numbers 🇵🇸'
+  const description = 'Stay updated on the latest figures'
   const ogImgTitle = `${daysOfWarCrimes} Days. ${abbreviate(martyred.total)}+ Killed.`
   const ogImgFooter = '#CeasefireNOW'
 
@@ -50,9 +51,14 @@ export default async function Home() {
   return (
     <div className=" bg-black">
       <main className='text-center p-8 max-w-xl mx-auto justify-center align-center items-center min-h-screen text-white'>
-        <Headline numbers={daysOfWarCrimes} title="days" />
-        <Headline numbers={total} title="killed" />
-        <Headline numbers={injured.total} title="injured" />
+        <a className="rounded-lg bg-gray-800 py-1.5 px-4 text-sm text-gray-200 cursor-pointer" href="https://ppm.techforpalestine.org">
+          🚨 Spotlight The Cause <FaArrowRight className="inline ml-0.5 txt-xs font-thin" />
+        </a>
+        <div className="mt-6">
+          <Headline numbers={daysOfWarCrimes} title="days" />
+          <Headline numbers={total} title="killed" />
+          <Headline numbers={injured.total} title="injured" />
+        </div>
         <div className="py-12">
           <p>Amongst those who have martyred:</p>
           <Stat numbers={children} title={"Children"} icon={<FaChildren className="text-4xl text-center block mx-auto" />} />
@@ -67,6 +73,6 @@ export default async function Home() {
           <p>Last updated: {dayjs(lastDailyUpdate).format('DD MMM YYYY')}</p>
         </div>
       </main>
-    </div>
+    </div >
   )
 }
