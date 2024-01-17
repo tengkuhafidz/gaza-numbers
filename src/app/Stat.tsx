@@ -5,8 +5,8 @@ import CountUp from "react-countup"
 
 interface Props {
     title: string,
-    icon: ReactNode
-    numbers: number,
+    icon: ReactNode,
+    numbers: number
 }
 
 export default function Stat({ numbers, title, icon }: Props) {
