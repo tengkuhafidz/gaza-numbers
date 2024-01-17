@@ -35,7 +35,7 @@ export async function generateMetadata(
       title,
       description: description,
       siteName: title,
-      images: `https://og.tailgraph.com/og?fontFamily=Roboto&title=${encodeURI(ogImgTitle)}&titleTailwind=font-bold%20text-6xl%20text-white&text=${encodeURI(description)}&textTailwind=text-2xl%20mt-4%20text-white&logoTailwind=h-8&bgTailwind=bg-black&footer=${ogImgFooter}&footerTailwind=text-white&t=1705504316657&refresh=1`,
+      images: `https://og.tailgraph.com/og?fontFamily=Roboto&title=${encodeURI(ogImgTitle)}&titleTailwind=font-bold%20text-6xl%20text-white&text=${encodeURI(description)}&textTailwind=text-2xl%20mt-4%20text-white&logoTailwind=h-8&bgTailwind=bg-black&footer=${encodeURI(ogImgFooter)}&footerTailwind=text-white&t=1705504316657&refresh=1`,
     }
   }
 }
