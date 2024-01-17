@@ -24,7 +24,7 @@ export async function generateMetadata(
 
   const title = 'Gaza in Numbers 🇵🇸'
   const description = 'Stay informed on the latest Gaza-Nakba numbers'
-  const ogImgTitle = `${daysOfWarCrimes} Days. ${abbreviate(martyred.total)}%2B Killed.`
+  const ogImgTitle = `${daysOfWarCrimes} Days. ${abbreviate(martyred.total)}+ Killed.`
   const ogImgFooter = '#CeasefireNOW'
 
   return {
