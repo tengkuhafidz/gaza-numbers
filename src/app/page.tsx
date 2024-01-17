@@ -26,7 +26,7 @@ export default async function Home() {
       <main className='text-center p-8 max-w-xl mx-auto justify-center align-center items-center min-h-screen text-white'>
         <Headline numbers={daysOfWarCrimes} title="days" />
         <Headline numbers={total} title="killed" />
-        <Headline numbers={injured} title="injured" />
+        <Headline numbers={injured.total} title="injured" />
         <div className="py-12">
           <p>Amongst those who have martyred:</p>
           <Stat numbers={children} title={"Children"} icon={<FaChildren className="text-4xl text-center block mx-auto" />} />
