@@ -66,7 +66,7 @@ export default async function Home() {
           <Stat numbers={press} title={"Journalists"} icon={<MdRecordVoiceOver className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={medical} title={"Medical Personnels"} icon={<FaUserDoctor className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={civilDefence} title={"Emergency Personnels"} icon={<GiAmbulance className="text-4xl text-center block mx-auto" />} />
-          <p className="mt-8">Each one of them had life full of dreams unjustly cut short by the Gaza war. Read about them on <a href="https://gaza23.com/stories" target="_blank" className="underline">gaza23.com</a>.</p>
+          <p className="mt-8">Each one of them had life full of dreams unjustly cut short by Israel's attack. Read about them on <a href="https://gaza23.com/stories" target="_blank" className="underline">gaza23.com</a>.</p>
         </div>
 
 
