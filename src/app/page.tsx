@@ -52,7 +52,7 @@ export default async function Home() {
     <div className=" bg-black">
       <main className='text-center p-8 max-w-xl mx-auto justify-center align-center items-center min-h-screen text-white'>
         <a className="rounded-lg bg-gray-800 py-1.5 px-4 text-sm text-gray-200 cursor-pointer" href="https://ppm.techforpalestine.org">
-          🚨 Spotlight The Cause <FaArrowRight className="inline ml-0.5 txt-xs font-thin" />
+          🚨 Spotlight The Cause<FaArrowRight className="inline ml-0.5 txt-xs font-thin" />
         </a>
         <div className="mt-6">
           <Headline numbers={daysOfWarCrimes} title="days" />
@@ -60,7 +60,7 @@ export default async function Home() {
           <Headline numbers={injured.total} title="injured" />
         </div>
         <div className="py-12">
-          <p>Amongst those who have martyred:</p>
+          <p>Amongst those who have Martyred:</p>
           <Stat numbers={children} title={"Children"} icon={<FaChildren className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={women} title={"Women"} icon={<IoWoman className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={press} title={"Journalists"} icon={<MdRecordVoiceOver className="text-4xl text-center block mx-auto" />} />
