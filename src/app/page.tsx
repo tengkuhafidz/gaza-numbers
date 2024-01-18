@@ -8,8 +8,6 @@ import { MdRecordVoiceOver } from "react-icons/md";
 import Headline from "./Headline";
 import Stat from "./Stat";
 
-
-
 async function getData() {
   const res = await fetch('https://data.techforpalestine.org/api/v1/summary.json')
   if (!res.ok) {
@@ -20,7 +18,7 @@ async function getData() {
 
 export async function generateMetadata(
 ): Promise<Metadata> {
-  const { martyred } = await getData()
+  const { martyred, } = await getData()
   const daysOfWarCrimes = dayjs().diff('2023-10-07', 'day')
 
   const title = 'Gaza Geneocide Numbers 🇵🇸'
