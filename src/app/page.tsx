@@ -18,8 +18,8 @@ async function getData() {
 
 export async function generateMetadata(
 ): Promise<Metadata> {
-  const { martyred, } = await getData()
-  const daysOfWarCrimes = dayjs().diff('2023-10-07', 'day')
+  const { martyred, lastDailyUpdate } = await getData()
+  const daysOfWarCrimes = dayjs(lastDailyUpdate).diff('2023-10-07', 'day')
 
   const title = 'Gaza Geneocide Numbers 🇵🇸'
   const description = 'Stay updated on the latest figures'
