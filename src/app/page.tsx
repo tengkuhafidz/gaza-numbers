@@ -49,7 +49,7 @@ export default async function Home() {
   const daysOfWarCrimes = dayjs().diff('2023-10-07', 'day')
 
   return (
-    <div className=" bg-black">
+    <div className="bg-black">
       <main className='text-center p-8 max-w-xl mx-auto justify-center align-center items-center min-h-screen text-white'>
         <a className="rounded-lg bg-gray-800 py-1.5 px-4 text-sm text-gray-200 cursor-pointer" href="https://ppm.techforpalestine.org">
           🚨 Spotlight The Cause<FaArrowRight className="inline ml-0.5 txt-xs font-thin" />
@@ -66,7 +66,12 @@ export default async function Home() {
           <Stat numbers={press} title={"Journalists"} icon={<MdRecordVoiceOver className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={medical} title={"Medical Personnels"} icon={<FaUserDoctor className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={civilDefence} title={"Emergency Personnels"} icon={<GiAmbulance className="text-4xl text-center block mx-auto" />} />
+          <p className="mt-8">Each one of them had life full of dreams unjustly cut short by the Gaza war. Read about them on <a href="https://gaza23.com/stories" target="_blank" className="underline">gaza23.com</a>.</p>
         </div>
+
+
+
+
 
         <div className="text-sm font-light ">
           <p>Data from: <a href="https://data.techforpalestine.org/docs/summary/" target="_blank" className="underline">data.techforpalestine.org</a></p>
