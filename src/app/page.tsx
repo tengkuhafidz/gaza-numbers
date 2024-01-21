@@ -9,7 +9,7 @@ import Headline from "./Headline";
 import Stat from "./Stat";
 
 async function getData() {
-  const res = await fetch('https://data.techforpalestine.org/api/v1/summary.json')
+  const res = await fetch('https://data.techforpalestine.org/api/v2/summary.json', { next: { revalidate: 3600 } });
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
@@ -41,10 +41,10 @@ export async function generateMetadata(
 
 
 export default async function Home() {
-  const { martyred, injured, lastDailyUpdate } = await getData()
-  const { total, children, women, civilDefence, press, medical } = martyred
+  const { killed, injured, lastDailyUpdate } = await getData()
+  const { total, children, women, civilDefence, press, medical } = killed
 
-  const daysOfWarCrimes = dayjs().diff('2023-10-07', 'day')
+  const daysOfWarCrimes = dayjs(lastDailyUpdate).diff('2023-10-07', 'day')
 
   return (
     <div className="bg-black">
