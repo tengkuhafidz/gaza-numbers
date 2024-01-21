@@ -18,12 +18,12 @@ async function getData() {
 
 export async function generateMetadata(
 ): Promise<Metadata> {
-  const { martyred, lastDailyUpdate } = await getData()
+  const { killed, lastDailyUpdate } = await getData()
   const daysOfWarCrimes = dayjs(lastDailyUpdate).diff('2023-10-07', 'day')
 
   const title = 'Gaza Geneocide Numbers 🇵🇸'
   const description = 'Stay updated on the latest figures'
-  const ogImgTitle = `${daysOfWarCrimes} Days. ${abbreviate(martyred.total)}+ Killed.`
+  const ogImgTitle = `${daysOfWarCrimes} Days. ${abbreviate(killed.total)} Killed.`
   const ogImgFooter = '#CeasefireNOW'
 
   return {
@@ -64,7 +64,7 @@ export default async function Home() {
           <Stat numbers={press} title={"Journalists"} icon={<MdRecordVoiceOver className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={medical} title={"Medical Personnels"} icon={<FaUserDoctor className="text-4xl text-center block mx-auto" />} />
           <Stat numbers={civilDefence} title={"Emergency Personnels"} icon={<GiAmbulance className="text-4xl text-center block mx-auto" />} />
-          <p className="mt-8">Each one of them had life full of dreams unjustly cut short by Israel's attack. Read about them on <a href="https://gaza23.com/stories" target="_blank" className="underline">gaza23.com</a>.</p>
+          <p className="mt-8">Each one of them had life full of dreams unjustly cut short by Israel‘s attack. Read about them on <a href="https://gaza23.com/stories" target="_blank" className="underline">gaza23.com</a>.</p>
         </div>
 
 
